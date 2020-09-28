@@ -24,11 +24,12 @@ namespace Zork
             while (command != Commands.QUIT) 
             {
                 Console.Write("> ");
-                command = ToCommand(Console.ReadLine().Trim());
+                //command = ToCommand(Console.ReadLine().Trim());
 
                 string outputString;
                 switch (command)
                 {
+                    //Console.Writeline(CurrentRoom);
                     case Commands.QUIT:
                         outputString = ("Thank you for playing!");
                         break;
@@ -53,8 +54,8 @@ namespace Zork
 
             }       
         }
-        /*
-        private static bool Move(Commands command)
+        
+        /*private static bool Move(Commands command)
         {
             //Assert.IsTrue(IsDirection(command), "Invalid Direction.");
             bool IsValidMove = true;
@@ -83,11 +84,23 @@ namespace Zork
             }
 
             return IsValidMove;
-        }*/
-
-        private static Commands ToCommand(string commandString)
-        {
-            return Enum.TryParse(commandString, true, out Commands result) ? result : Commands.UNKNOWN;
         }
+
+        private static Commands ToCommand(string commandString) =>
+            Enum.TryParse(commandString, true, out Commands result) ? result : Commands.UNKNOWN;
+
+        //private static bool isDirection(Commands, command) => Directions.Contains(command);
+
+        private static readonly string[,] Rooms =
+        {
+            {"Rocky Trail", "South of the House", "Canyon View"},
+            {"Forest", "West of the House", "Behind the House" },
+            {"Dense Woods", "North of House", "Clearing" }
+        };
+
+        /*private static readonly List<Commands> Directions = new List<Commands>
+        {
+
+        }*/
     }
 }
