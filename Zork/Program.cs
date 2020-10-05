@@ -33,11 +33,18 @@ namespace Zork
         }
         static void Main(string[] args)
         {
-            Program.InitializeRoomDescriptions(); 
-
             Console.WriteLine("Welcome to Zork!");
+            Program.InitializeRoomDescriptions();
 
+            Room previousRoom = null;
             Commands command = Commands.UNKNOWN;
+
+            if (previousRoom != CurrentRoom)
+            {
+                Console.WriteLine(CurrentRoom.Description);
+                previousRoom = CurrentRoom;
+            }
+
             while (command != Commands.QUIT) 
             {
                 Console.WriteLine(CurrentRoom);
