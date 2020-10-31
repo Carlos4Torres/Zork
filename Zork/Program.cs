@@ -5,6 +5,7 @@ using System.Data.Common;
 using System.IO;
 using System.Linq;
 using System.Runtime.Remoting;
+using Newtonsoft.Json;
 
 namespace Zork
 {
@@ -20,31 +21,9 @@ namespace Zork
             Description
         }
 
-        private static readonly Dictionary<string, Room> RoomMap;
+        private static void InitializeRoomDescriptions(string roomsFilename) =>
+        Rooms = JsonConvert.DeserializeObject<Room[,]>(File.ReadAllText(roomsFilename));
 
-        static Program()
-        {
-            RoomMap = new Dictionary<string, Room>();
-            foreach (Room room in Rooms)
-            {
-                RoomMap[room.Name] = room;
-            }
-        }
-        private static void InitializeRoomDescriptions(string roomsFilename)
-        {
-            const string fieldDelimiter = "##";
-            const int expectedFieldCount = 2;
-            var roomQuery = from line in File.ReadLines(roomsFilename)
-                            let fields = line.Split(fieldDelimiter)
-                            where fields.Length == expectedFieldCount
-                            select (Name: fields[(int)Fields.Name],
-                                    Descriptions: fields[(int)Fields.Description]);
-
-            foreach (var (Name, Description) in roomQuery)
-            {
-                RoomMap[Name].Description = Description;
-            }
-        }
         public static Room CurrentRoom
         {
             get
@@ -57,7 +36,7 @@ namespace Zork
         {
             Console.WriteLine("Welcome to Zork!");
 
-            const string defaultRoomsFilename = "Rooms.txt";
+            const string defaultRoomsFilename = "Rooms.json";
             string roomsFilename = (args.Length > 0 ? args[(int)CommandLineArguments.RoomsFilename] : defaultRoomsFilename);
             InitializeRoomDescriptions(roomsFilename);
 
@@ -144,7 +123,7 @@ namespace Zork
 
         private static bool IsDirection(Commands command) => Directions.Contains(command);
 
-        private static readonly Room[,] Rooms = {
+        private static Room[,] Rooms = {
             { new Room("Rocky Trail"), new Room("South of House"), new Room("Canyon View") },
             { new Room("Forest"), new Room("West of House"), new Room("Behind House") },
             { new Room("Dense Woods"), new Room("North of House"), new Room("Clearing") }
