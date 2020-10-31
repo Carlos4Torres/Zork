@@ -30,7 +30,7 @@ namespace Zork
                 RoomMap[room.Name] = room;
             }
         }
-        private static void InitializeRoomDescriptions(string roomsFilename)
+        private static void InitializeRoomDescriptionsFunc(string roomsFilename)
         {
             const string fieldDelimiter = "##";
             const int expectedFieldCount = 2;
@@ -62,7 +62,7 @@ namespace Zork
         {
             Console.WriteLine("Welcome to Zork!");
             string roomsFilename = "Rooms.txt";
-            InitializeRoomDescriptions(roomsFilename);
+            InitializeRoomDescriptionsFunc(roomsFilename);
 
 
 
