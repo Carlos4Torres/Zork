@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Data.Common;
+using System.IO;
 using System.Linq;
 using System.Runtime.Remoting;
 
@@ -9,26 +10,44 @@ namespace Zork
 {
     internal class Program
     {
-        private static void InitializeRoomDescriptions()
+        private enum CommandLineArguments
         {
-            var roomMap = new Dictionary<string, Room>();
+            RoomsFilename = 0
+        }
+        private enum Fields
+        {
+            Name = 0,
+            Description
+        }
 
+        private static readonly Dictionary<string, Room> RoomMap;
+
+        static Program()
+        {
+            RoomMap = new Dictionary<string, Room>();
             foreach (Room room in Rooms)
             {
-                roomMap[room.Name] = room;
+                RoomMap[room.Name] = room;
             }
+        }
+        private static void InitializeRoomDescriptions(string roomsFilename)
+        {
+            const string fieldDelimiter = "##";
+            const int expectedFieldCount = 2;
 
-            roomMap["Rocky Trail"].Description = "You are on a rock-strewn trail.";
-            roomMap["South of House"].Description = "You are facing the south side of a white house. There is no door here, and all the other windows are barred.";
-            roomMap["Canyon View"].Description = "You are at the top of the Great Canyon on its south wall.";
+            string[] lines = File.ReadAllLines(roomsFilename);
+            foreach (string line in lines)
+            {
+                string[] fields = line.Split(fieldDelimiter);
+                if (fields.Length != expectedFieldCount)
+                {
+                    throw new InvalidDataException("Invalid record.");
+                }
+                string name = fields[(int)Fields.Name];
+                string description = fields[(int)Fields.Description];
 
-            roomMap["Forest"].Description = "This is a forest, with trees in all direction around you.";
-            roomMap["West of House"].Description = "This is an open field west of a white house, with a boarded front door.";
-            roomMap["Behind House"].Description = "You are behind the white house. In one corner of the house, there is a small window which is slightly ajar.";
-
-            roomMap["Dense Woods"].Description = "This is a dimly lit forest, with large trees all around. To the east, there appears to be sunlight.";
-            roomMap["North of House"].Description = "You are facing the north side of a white house. There is no door here, and all the other windows are barred.";
-            roomMap["Clearing"].Description = "You are in a clearing, with a forest surrounding you on the west and south.";
+                RoomMap[name].Description = description;
+            }
 
         }
         public static Room CurrentRoom
@@ -42,7 +61,11 @@ namespace Zork
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Zork!");
-            InitializeRoomDescriptions();
+            string roomsFilename = "Rooms.txt";
+            InitializeRoomDescriptions(roomsFilename);
+
+
+
 
             Room previousRoom = null;
             Commands command = Commands.UNKNOWN;
