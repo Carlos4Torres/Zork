@@ -76,5 +76,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Zork.Common\Zork.Common.csproj">
+      <Project>{31d9013a-4645-4abe-8c69-6cd69f52da93}</Project>
+      <Name>Zork.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
