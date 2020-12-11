@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Carlo\\OneDrive\\Documents\\GitHub\\Zork 3\\Zork\\Zork\\Zork.csproj": {}
+    "D:\\School Work\\UCF Fall 2020\\Tools and Plugins\\Zork\\Zork\\Zork.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Carlo\\OneDrive\\Documents\\GitHub\\Zork 3\\Zork\\Zork\\Zork.csproj": {
+    "D:\\School Work\\UCF Fall 2020\\Tools and Plugins\\Zork\\Zork\\Zork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Carlo\\OneDrive\\Documents\\GitHub\\Zork 3\\Zork\\Zork\\Zork.csproj",
+        "projectUniqueName": "D:\\School Work\\UCF Fall 2020\\Tools and Plugins\\Zork\\Zork\\Zork.csproj",
         "projectName": "Zork",
-        "projectPath": "C:\\Users\\Carlo\\OneDrive\\Documents\\GitHub\\Zork 3\\Zork\\Zork\\Zork.csproj",
-        "packagesPath": "C:\\Users\\Carlo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Carlo\\OneDrive\\Documents\\GitHub\\Zork 3\\Zork\\Zork\\obj\\",
+        "projectPath": "D:\\School Work\\UCF Fall 2020\\Tools and Plugins\\Zork\\Zork\\Zork.csproj",
+        "packagesPath": "C:\\Users\\techf\\.nuget\\packages\\",
+        "outputPath": "D:\\School Work\\UCF Fall 2020\\Tools and Plugins\\Zork\\Zork\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\techf\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,7 +38,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.CodeAnalysis.CSharp.Scripting": {
+              "target": "Package",
+              "version": "[3.7.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
@@ -58,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Carlo\\OneDrive\\Documents\\GitHub\\Zork 3\\Zork\\Zork\\Zork.Console.csproj": {}
+    "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\Zork.Console\\Zork.Console.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Carlo\\OneDrive\\Documents\\GitHub\\Zork 3\\Zork\\Zork.Common\\Zork.Common.csproj": {
+    "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\InventoryManager.Data\\InventoryManager.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Carlo\\OneDrive\\Documents\\GitHub\\Zork 3\\Zork\\Zork.Common\\Zork.Common.csproj",
-        "projectName": "Zork.Common",
-        "projectPath": "C:\\Users\\Carlo\\OneDrive\\Documents\\GitHub\\Zork 3\\Zork\\Zork.Common\\Zork.Common.csproj",
+        "projectUniqueName": "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\InventoryManager.Data\\InventoryManager.Data.csproj",
+        "projectName": "InventoryManager.Data",
+        "projectPath": "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\InventoryManager.Data\\InventoryManager.Data.csproj",
         "packagesPath": "C:\\Users\\Carlo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Carlo\\OneDrive\\Documents\\GitHub\\Zork 3\\Zork\\Zork.Common\\obj\\",
+        "outputPath": "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\InventoryManager.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,14 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "PropertyChanged.Fody": {
+              "target": "Package",
+              "version": "[3.1.3, )"
             }
           },
           "imports": [
@@ -59,14 +67,107 @@
         }
       }
     },
-    "C:\\Users\\Carlo\\OneDrive\\Documents\\GitHub\\Zork 3\\Zork\\Zork\\Zork.Console.csproj": {
+    "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\Zork.Builder.WinForms\\Zork.Builder.WinForms.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\Zork.Builder.WinForms\\Zork.Builder.WinForms.csproj",
+        "projectName": "Zork.Builder.WinForms",
+        "projectPath": "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\Zork.Builder.WinForms\\Zork.Builder.WinForms.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\InventoryManager.Data\\InventoryManager.Data.csproj": {
+                "projectPath": "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\InventoryManager.Data\\InventoryManager.Data.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\Zork.Common\\Zork.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Carlo\\OneDrive\\Documents\\GitHub\\Zork 3\\Zork\\Zork\\Zork.Console.csproj",
-        "projectName": "Zork.Console",
-        "projectPath": "C:\\Users\\Carlo\\OneDrive\\Documents\\GitHub\\Zork 3\\Zork\\Zork\\Zork.Console.csproj",
+        "projectUniqueName": "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\Zork.Common\\Zork.Common.csproj",
+        "projectName": "Zork.Common",
+        "projectPath": "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\Zork.Common\\Zork.Common.csproj",
         "packagesPath": "C:\\Users\\Carlo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Carlo\\OneDrive\\Documents\\GitHub\\Zork 3\\Zork\\Zork\\obj\\",
+        "outputPath": "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\Zork.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\InventoryManager.Data\\InventoryManager.Data.csproj": {
+                "projectPath": "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\InventoryManager.Data\\InventoryManager.Data.csproj"
+              },
+              "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\Zork.Builder.WinForms\\Zork.Builder.WinForms.csproj": {
+                "projectPath": "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\Zork.Builder.WinForms\\Zork.Builder.WinForms.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.CodeAnalysis.CSharp.Scripting": {
+              "target": "Package",
+              "version": "[3.8.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "PropertyChanged.Fody": {
+              "target": "Package",
+              "version": "[3.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\Zork.Console\\Zork.Console.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\Zork.Console\\Zork.Console.csproj",
+        "projectName": "Zork.Console",
+        "projectPath": "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\Zork.Console\\Zork.Console.csproj",
+        "packagesPath": "C:\\Users\\Carlo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\Zork.Console\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +183,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Carlo\\OneDrive\\Documents\\GitHub\\Zork 3\\Zork\\Zork.Common\\Zork.Common.csproj": {
-                "projectPath": "C:\\Users\\Carlo\\OneDrive\\Documents\\GitHub\\Zork 3\\Zork\\Zork.Common\\Zork.Common.csproj"
+              "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\Zork.Common\\Zork.Common.csproj": {
+                "projectPath": "C:\\Users\\Carlo\\OneDrive\\Documents\\Unity Zork\\Zork.Common\\Zork.Common.csproj"
               }
             }
           }
@@ -97,9 +198,17 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.CodeAnalysis.CSharp.Scripting": {
+              "target": "Package",
+              "version": "[3.8.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
+            },
+            "PropertyChanged.Fody": {
+              "target": "Package",
+              "version": "[3.3.1, )"
             }
           },
           "imports": [

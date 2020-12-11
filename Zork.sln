@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zork.Console", "Zork\Zork.Console.csproj", "{5CA2293E-C33E-45FA-812F-04EEE11F1F0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zork.Common", "Zork.Common\Zork.Common.csproj", "{0A2F4EE4-790A-482A-95BA-0DB3A6669376}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zork.Common", "Zork.Common\Zork.Common.csproj", "{31D9013A-4645-4ABE-8C69-6CD69F52DA93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zork.Console", "Zork.Console\Zork.Console.csproj", "{D5AD073E-C0EB-4E3E-B6F0-47464213A792}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zork.Builder.WinForms", "Zork.Builder.WinForms\Zork.Builder.WinForms.csproj", "{E4E0AE55-74EF-40C2-ADF7-40A9D52E4853}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zork.Builder.WinForms", "Zork.Builder.WinForms\Zork.Builder.WinForms.csproj", "{BDFFEC5E-545D-409C-9F81-6C618408B8AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryManager.Data", "InventoryManager.Data\InventoryManager.Data.csproj", "{CC2F3305-1274-4F5E-BEAD-BC3D14D54904}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,23 +17,27 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5CA2293E-C33E-45FA-812F-04EEE11F1F0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5CA2293E-C33E-45FA-812F-04EEE11F1F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5CA2293E-C33E-45FA-812F-04EEE11F1F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5CA2293E-C33E-45FA-812F-04EEE11F1F0A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{31D9013A-4645-4ABE-8C69-6CD69F52DA93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{31D9013A-4645-4ABE-8C69-6CD69F52DA93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{31D9013A-4645-4ABE-8C69-6CD69F52DA93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{31D9013A-4645-4ABE-8C69-6CD69F52DA93}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E4E0AE55-74EF-40C2-ADF7-40A9D52E4853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E4E0AE55-74EF-40C2-ADF7-40A9D52E4853}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E4E0AE55-74EF-40C2-ADF7-40A9D52E4853}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E4E0AE55-74EF-40C2-ADF7-40A9D52E4853}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A2F4EE4-790A-482A-95BA-0DB3A6669376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A2F4EE4-790A-482A-95BA-0DB3A6669376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A2F4EE4-790A-482A-95BA-0DB3A6669376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A2F4EE4-790A-482A-95BA-0DB3A6669376}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5AD073E-C0EB-4E3E-B6F0-47464213A792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5AD073E-C0EB-4E3E-B6F0-47464213A792}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5AD073E-C0EB-4E3E-B6F0-47464213A792}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5AD073E-C0EB-4E3E-B6F0-47464213A792}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDFFEC5E-545D-409C-9F81-6C618408B8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDFFEC5E-545D-409C-9F81-6C618408B8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDFFEC5E-545D-409C-9F81-6C618408B8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDFFEC5E-545D-409C-9F81-6C618408B8AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC2F3305-1274-4F5E-BEAD-BC3D14D54904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC2F3305-1274-4F5E-BEAD-BC3D14D54904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC2F3305-1274-4F5E-BEAD-BC3D14D54904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC2F3305-1274-4F5E-BEAD-BC3D14D54904}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B508CF81-904A-4109-82EA-011C628AFFEE}
+		SolutionGuid = {5B69891C-F4EA-43E9-B7D5-39E7E5C6336D}
 	EndGlobalSection
 EndGlobal

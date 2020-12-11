@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{A0079709-B318-D0F0-DE0B-236529E67E2F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zork.Common", "..\Zork.Common\Zork.Common.csproj", "{BF455491-AA2D-4DBB-A6ED-3F508D91BDAB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zork.Console", "..\Zork.Console\Zork.Console.csproj", "{F03AD7DC-4C69-4B81-8971-F20930AB6266}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0079709-B318-D0F0-DE0B-236529E67E2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0079709-B318-D0F0-DE0B-236529E67E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0079709-B318-D0F0-DE0B-236529E67E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0079709-B318-D0F0-DE0B-236529E67E2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF455491-AA2D-4DBB-A6ED-3F508D91BDAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF455491-AA2D-4DBB-A6ED-3F508D91BDAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF455491-AA2D-4DBB-A6ED-3F508D91BDAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF455491-AA2D-4DBB-A6ED-3F508D91BDAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F03AD7DC-4C69-4B81-8971-F20930AB6266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F03AD7DC-4C69-4B81-8971-F20930AB6266}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F03AD7DC-4C69-4B81-8971-F20930AB6266}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F03AD7DC-4C69-4B81-8971-F20930AB6266}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
